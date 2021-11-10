@@ -8,16 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Berita extends Model
 {
     use HasFactory;
-
-    protected $table="tblberita";
-
+    protected $table = "tblberita";
+    
+    protected $fillable = ["kategori_id", "judul", "isi","user_id"];
+    
     /**
      * Get the user that owns the Berita
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * 
+     * @return \Illuminate\Database\Relations\BelongsTo
      */
+    
     public function kategori()
     {
-        return $this->belongsTo(Kategori::class, 'kategori_id', 'id');
+     return $this->belongsTo(Kategori:: class,'kategori_id', 'id');
     }
 }

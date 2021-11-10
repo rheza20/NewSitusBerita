@@ -8,6 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Komentar extends Model
 {
     use HasFactory;
-    
-    protected $table="tblkomentar";
+    protected $table = "tblkomentar";
 }
